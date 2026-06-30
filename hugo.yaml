@@ -1,0 +1,37 @@
+baseURL: "https://georgehaotianbai.github.io/Personal-Website/"
+title: "George Bai"
+languageCode: "en-us"
+enableRobotsTXT: true
+
+params:
+  description: "Incoming PhD student at MIT Sloan studying technological change, innovation, political economy, strategy, and agentic AI."
+  author: "George Bai"
+  email: "georgeht@mit.edu"
+  affiliation: "MIT Sloan School of Management"
+  linkedin: "https://www.linkedin.com/in/george-bai-415457237/"
+  mysite:
+    credit: true
+    discovery: true
+
+menu:
+  main:
+    - name: "Research"
+      url: "/#research"
+      weight: 10
+    - name: "Projects"
+      url: "/#projects"
+      weight: 20
+    - name: "Teaching"
+      url: "/#teaching"
+      weight: 30
+    - name: "Reading groups"
+      url: "/#reading-groups"
+      weight: 40
+    - name: "Contact"
+      url: "/#contact"
+      weight: 50
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

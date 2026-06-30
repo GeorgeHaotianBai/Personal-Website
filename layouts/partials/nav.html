@@ -1,0 +1,14 @@
+<header class="site-header">
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="site-brand" href="{{ site.Home.RelPermalink }}">George Bai</a>
+    <details class="nav-menu">
+      <summary aria-label="Open navigation"><span></span><span></span><span></span></summary>
+      <div class="nav-links">
+        {{ range site.Menus.main }}
+          <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+        {{ end }}
+      </div>
+    </details>
+  </nav>
+</header>
+

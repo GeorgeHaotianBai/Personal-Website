@@ -1,0 +1,7 @@
+{{- $people := . -}}
+{{- range $index, $person := $people -}}
+  {{- if gt $index 0 -}}
+    {{- if eq $index (sub (len $people) 1) }} and {{ else }}, {{ end -}}
+  {{- end -}}
+  <a href="{{ $person.url }}" target="_blank" rel="noopener">{{ $person.name }}</a>
+{{- end -}}

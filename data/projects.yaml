@@ -1,0 +1,15 @@
+- name: "Collective Action and Surveillance Expansion"
+  status: "Data project"
+  labels:
+    - "Pre-PhD"
+  collaborators:
+    - name: "Zachary C. Steinert-Threlkeld"
+      url: "https://luskin.ucla.edu/person/zachary-c-steinert-threlkeld"
+    - name: "Han Zhang"
+      url: "https://hanzhang.xyz/"
+  description: "A new geospatial panel links offline protest events to local surveillance infrastructure across Turkey."
+  abstract: >-
+    How does collective action shape the expansion of state surveillance? We build a new geospatial panel linking offline protest events in Turkey to local camera infrastructure. Starting from 96.3 million geolocated Twitter posts collected between 2013 and 2020, a keyword filter, two-stage LLM classifier, human validation exercise, and spatiotemporal aggregation recover discrete protest episodes. The resulting daily series closely tracks an independent protest-event database during their common coverage period, with a Pearson correlation of 0.670. Around each protest location, we sample 50 road points within a 3 km x 3 km window, retrieve repeated Google Street View imagery, and apply computer vision to measure camera presence across locations and image vintages. The resulting location-time panel provides new data for studying whether contentious activity predicts subsequent surveillance deployment and how this relationship varies across urban space.
+  image: "images/protest-surveillance-turkey.jpg"
+  image_alt: "Maps of classified protest postings across Turkey, Ankara, Istanbul, and Izmir"
+  image_caption: "Classified protest postings across Turkey and in Ankara, Istanbul, and Izmir."

@@ -1,0 +1,146 @@
+{{ define "main" }}
+  <section class="hero page-shell" aria-labelledby="hero-title">
+    <h1 id="hero-title">George Bai</h1>
+    <p class="hero-role">
+      <span class="hero-role-main">Incoming PhD Student · MIT Sloan School of Management</span>
+      <span class="hero-program">
+        <span class="hero-program-label">TIES</span>
+        <span>Technological Innovation, Entrepreneurship, and Strategic Management</span>
+      </span>
+    </p>
+    <ul class="hero-tagline">
+      <li>Technological Change, Economics of Innovation, and Labour Economics</li>
+      <li>Political Economy (esp. Geoeconomics and Legal-political Institutions) and Strategy</li>
+      <li>Agentic AI and Social Science</li>
+    </ul>
+    <div class="hero-links">
+      <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+      <span aria-hidden="true">·</span>
+      <a href="{{ site.Params.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
+  <section id="about" class="section page-shell prose" aria-labelledby="about-title">
+    <h2 id="about-title">About</h2>
+    {{ .Content }}
+  </section>
+
+  <section id="research" class="section page-shell" aria-labelledby="research-title">
+    <div class="section-heading">
+      <h2 id="research-title">Working papers</h2>
+    </div>
+    <div class="papers-list">
+      {{ range $index, $paper := site.Data.papers }}
+        <article class="paper-card">
+          <div class="paper-index" aria-hidden="true">{{ printf "%02d" (add $index 1) }}</div>
+          <div class="paper-summary">
+            <div class="paper-main">
+              <div class="paper-badges">
+                <span class="status-badge">{{ $paper.status }}</span>
+                {{ range $paper.labels }}<span class="status-badge status-badge-secondary">{{ . }}</span>{{ end }}
+              </div>
+              <h3>{{ $paper.title }}</h3>
+              {{ with $paper.authors }}
+                <p class="paper-authors">with {{ partial "people-list.html" . }}</p>
+              {{ end }}
+              {{ with $paper.presentations }}
+                <p class="paper-presentations">Presented at {{ delimit . "; " }}</p>
+              {{ end }}
+              <div class="paper-links">
+                {{ with $paper.pdf }}<a href="{{ . }}" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a>{{ end }}
+              </div>
+            </div>
+            <details class="abstract-panel">
+              <summary><span class="open-label">View abstract</span><span class="close-label">Close abstract</span><span class="summary-icon" aria-hidden="true">+</span></summary>
+              <div class="abstract-content">
+                <div>
+                  <p class="abstract-label">Abstract</p>
+                  <p>{{ $paper.abstract }}</p>
+                </div>
+                <figure>
+                  <img src="{{ $paper.image | relURL }}" alt="{{ $paper.image_alt }}" loading="lazy">
+                </figure>
+              </div>
+            </details>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section id="work-in-progress" class="section page-shell" aria-labelledby="wip-title">
+    <h2 id="wip-title">Work in progress</h2>
+    <ol class="wip-list">
+      {{ range site.Data.work_in_progress }}<li>{{ .title }}</li>{{ end }}
+    </ol>
+  </section>
+
+  <section id="projects" class="section page-shell" aria-labelledby="projects-title">
+    <h2 id="projects-title">Data projects</h2>
+    {{ range $index, $project := site.Data.projects }}
+      <article class="paper-card project-card">
+        <div class="paper-index" aria-hidden="true">{{ printf "%02d" (add $index 1) }}</div>
+        <div class="paper-summary">
+          <div class="paper-main">
+            <div class="paper-badges">
+              <span class="status-badge">{{ $project.status }}</span>
+              {{ range $project.labels }}<span class="status-badge status-badge-secondary">{{ . }}</span>{{ end }}
+            </div>
+            <h3>{{ $project.name }}</h3>
+            {{ with $project.collaborators }}
+              <p class="paper-authors">with {{ partial "people-list.html" . }}</p>
+            {{ end }}
+            <p class="project-description">{{ $project.description }}</p>
+          </div>
+          <details class="abstract-panel">
+            <summary><span class="open-label">View project abstract</span><span class="close-label">Close project abstract</span><span class="summary-icon" aria-hidden="true">+</span></summary>
+            <div class="abstract-content">
+              <div>
+                <p class="abstract-label">Abstract</p>
+                <p>{{ $project.abstract }}</p>
+              </div>
+              <figure>
+                <img src="{{ $project.image | relURL }}" alt="{{ $project.image_alt }}" loading="lazy">
+                <figcaption>{{ $project.image_caption }}</figcaption>
+              </figure>
+            </div>
+          </details>
+        </div>
+      </article>
+    {{ end }}
+  </section>
+
+  <section id="teaching" class="section page-shell" aria-labelledby="teaching-title">
+    <h2 id="teaching-title">Teaching</h2>
+    {{ range site.Data.teaching }}
+      <article class="teaching-item">
+        <div><h3>{{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .course }}{{ with .url }}</a>{{ end }}</h3><p>{{ .institution }}</p></div>
+        <time>{{ .term }}</time>
+      </article>
+    {{ end }}
+  </section>
+
+  <section id="reading-groups" class="section page-shell" aria-labelledby="reading-title">
+    <h2 id="reading-title">Reading groups</h2>
+    <p class="section-intro">Since 2024, my coauthors and I have organized regular reading groups in political economy and microeconomic theory. We prepare lecture-style slides that synthesize research agendas and formal frameworks. Email me for the full reading lists.</p>
+    <div class="reading-list">
+      {{ range site.Data.reading_groups }}
+        <details>
+          <summary><span>{{ .season }}</span><span aria-hidden="true">+</span></summary>
+          <ol>
+            {{ range .slides }}
+              <li><a href="{{ .url }}" target="_blank" rel="noopener"><span>{{ .name }}</span><small>{{ .title }}</small></a></li>
+            {{ end }}
+          </ol>
+        </details>
+      {{ end }}
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section" aria-labelledby="contact-title">
+    <div class="page-shell">
+      <h2 id="contact-title">Contact</h2>
+      <p>For research conversations, seminar invitations, or collaboration, write to me at <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>.</p>
+    </div>
+  </section>
+{{ end }}

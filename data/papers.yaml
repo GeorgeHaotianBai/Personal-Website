@@ -1,0 +1,50 @@
+- title: "Amusement to Obedience: TV Coverage and Authoritarian Durability"
+  authors:
+    - name: "Siyuan Fan"
+      url: "https://fansiyuan.weebly.com/"
+    - name: "Wenyi Lu"
+      url: "https://luwenyi.weebly.com/"
+    - name: "Shangkun Xie"
+      url: "https://shangkunxie.weebly.com/"
+  status: "Working paper"
+  labels:
+    - "Pre-PhD"
+  pdf: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5091087"
+  image: "images/tv-coverage.png"
+  image_alt: "Estimated effects of television coverage across outcomes"
+  abstract: >-
+    How does entertainment media manufacture political support in authoritarian states? Leveraging a nationwide television subsidy program in rural China, we find that adolescents with greater formative-era exposure to color TV later exhibit higher regime support, increased political trust, and lower anti-authoritarian resistance. These patterns reflect an illusory accountability effect. Adolescents with increased TV exposure display lower cognitive performance, educational attainment, and political understanding, while experiencing higher emotional satisfaction from entertainment. This combination of impaired critical capacity and heightened low-cost affective satisfaction leads to lower demands for government accountability and fewer protests.
+  presentations:
+    - "ES-CSW 2026, Abu Dhabi"
+    - "EEA 2025, Bordeaux"
+    - "RES 2025, Birmingham"
+
+- title: "The Legacy of Communist Dreams: Socialist Legacy, Automation, and Protest"
+  authors:
+    - name: "Siyuan Fan"
+      url: "https://fansiyuan.weebly.com/"
+    - name: "Wenyi Lu"
+      url: "https://luwenyi.weebly.com/"
+  status: "Working paper"
+  labels:
+    - "Pre-PhD"
+  pdf: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4797721"
+  image: "images/communist-legacy.png"
+  image_alt: "Spatial distribution of protests and socialist legacy"
+  abstract: >-
+    Why do revolutionary autocracies experience protests yet remain durable? This paper reconciles the paradox through the long-term political consequences of social revolutions. We propose legacy-conditioned targeting, in which mass mobilization and identity reconstruction generate a resistance-and-loyalty equilibrium. Citizens develop a strong inclination to resist unjust treatment alongside loyalty to revolutionary authority. These orientations persist through intergenerational transmission. Using original measures of China's socialist legacy and protest data from social media, we find that citizens protest when facing unemployment risk from automation, especially in areas with an intensive revolutionary legacy. The same legacy predicts stronger regime support and channels protest toward economic interests, consolidating the authoritarian status quo.
+  presentations:
+    - "MPSA 2025, Chicago"
+    - "RES 2025, Birmingham"
+
+- title: "Manufacturing Enemies: Symbolic Policies and Social Conflict"
+  authors: []
+  status: "Working paper"
+  labels:
+    - "Pre-PhD"
+    - "M.Phil. Thesis"
+  pdf: "https://www.dropbox.com/scl/fi/2ol9iryjosaef777iu3fc/Haotian-Bai.pdf?rlkey=toubkoul9jf4xid18sx75km14&dl=0"
+  image: "images/manufacturing-enemies.jpg"
+  image_alt: "Phase diagram showing three political regimes in the model"
+  abstract: >-
+    What is the purpose of identity-coded policies that target domestic minorities? I develop a theory of symbolic policies combining political competition and social conflict. Two parties compete in elections with probabilistic retrospective voting, while majority and minority groups contest identity security through costly individual effort. Symbolic policy allows a security-advantaged party to manufacture a threat that reduces majority free-riding and makes identity security electorally salient. A two-period model shows that the Hawk party's vote share is non-monotonic in the grievance it manufactures. Once minority mobilization becomes sufficiently strong, future conflict continues across incumbent policies. In the infinite-horizon model, the depreciation rate of minority mobilization determines whether politics enters a persistent Hawk trap or recurrent Hawk-Dove cycles. The predictions match patterns surrounding India's cattle-slaughter bans and clarify how restrictions on symbolic policy may backfire.
