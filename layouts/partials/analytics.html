@@ -1,0 +1,53 @@
+{{ with site.Params.analytics.google }}
+  <aside class="consent-banner" id="analytics-consent" aria-label="Analytics consent" hidden>
+    <p>This site uses Google Analytics to understand aggregate visitor traffic.</p>
+    <div class="consent-actions">
+      <button type="button" data-consent="granted">Allow analytics</button>
+      <button type="button" class="consent-decline" data-consent="denied">Decline</button>
+    </div>
+  </aside>
+  <script>
+    (function () {
+      var measurementId = {{ . | jsonify }};
+      var storageKey = "george-bai-analytics-consent";
+      var banner = document.getElementById("analytics-consent");
+
+      function savedChoice() {
+        try { return window.localStorage.getItem(storageKey); } catch (error) { return null; }
+      }
+
+      function saveChoice(choice) {
+        try { window.localStorage.setItem(storageKey, choice); } catch (error) { return; }
+      }
+
+      function loadAnalytics() {
+        if (window.googleAnalyticsLoaded) return;
+        window.googleAnalyticsLoaded = true;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { window.dataLayer.push(arguments); };
+        window.gtag("js", new Date());
+        window.gtag("config", measurementId, { anonymize_ip: true });
+        var script = document.createElement("script");
+        script.async = true;
+        script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+        document.head.appendChild(script);
+      }
+
+      var choice = savedChoice();
+      if (choice === "granted") {
+        loadAnalytics();
+      } else if (choice !== "denied") {
+        banner.hidden = false;
+      }
+
+      banner.addEventListener("click", function (event) {
+        var button = event.target.closest("[data-consent]");
+        if (!button) return;
+        var selected = button.getAttribute("data-consent");
+        saveChoice(selected);
+        banner.hidden = true;
+        if (selected === "granted") loadAnalytics();
+      });
+    }());
+  </script>
+{{ end }}

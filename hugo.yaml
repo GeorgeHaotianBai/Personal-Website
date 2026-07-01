@@ -9,6 +9,8 @@ params:
   email: "georgeht@mit.edu"
   affiliation: "MIT Sloan School of Management"
   linkedin: "https://www.linkedin.com/in/george-bai-415457237/"
+  analytics:
+    google: "G-B4WBXXB18H"
   mysite:
     credit: true
     discovery: true
