@@ -8,6 +8,15 @@
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
+{{ with site.Params.analytics.google }}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ . }}', { 'anonymize_ip': true });
+  </script>
+{{ end }}
 {{ if site.Params.mysite.discovery }}
   <meta name="generator" content="Created using GaryKing.org/mysite (https://gking.harvard.edu/mysite)">
   {{ if .IsHome }}
