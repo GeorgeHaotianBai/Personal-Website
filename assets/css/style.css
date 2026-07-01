@@ -140,7 +140,7 @@ h1, h2, h3 { text-wrap: balance; }
 .hero-links a:hover { text-decoration-color: currentColor; }
 
 .section { padding-block: .1rem; scroll-margin-top: var(--nav-height); }
-#about { padding-block: .9rem; }
+#about { width: min(900px, calc(100% - 3rem)); padding-block: .9rem; }
 #research { padding-top: .9rem; }
 #work-in-progress,
 #projects,
@@ -159,6 +159,9 @@ h1, h2, h3 { text-wrap: balance; }
 .prose p { margin-bottom: .9rem; font-size: 1.05rem; }
 .prose p:last-child { margin-bottom: 0; }
 .section-intro { max-width: 650px; color: var(--muted); }
+.about-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(220px, .65fr); gap: 2.5rem; align-items: center; }
+.about-photo { width: 240px; margin: 0; justify-self: end; }
+.about-photo img { width: 100%; aspect-ratio: 1; object-fit: cover; border: 1px solid rgba(23, 38, 34, .12); border-radius: 50%; }
 
 .papers-list { display: grid; gap: 1rem; }
 .paper-card {
@@ -307,6 +310,9 @@ h1, h2, h3 { text-wrap: balance; }
   .hero-tagline { font-size: .94rem; }
   .hero-tagline li { white-space: normal; }
   .section { padding-block: .1rem; }
+  #about { width: min(100% - 2rem, 720px); }
+  .about-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .about-photo { width: 180px; justify-self: start; order: -1; }
   #work-in-progress,
   #projects,
   #teaching,

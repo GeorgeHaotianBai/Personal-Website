@@ -20,9 +20,14 @@
     </div>
   </section>
 
-  <section id="about" class="section page-shell prose" aria-labelledby="about-title">
+  <section id="about" class="section page-shell" aria-labelledby="about-title">
     <h2 id="about-title">About</h2>
-    {{ .Content }}
+    <div class="about-grid">
+      <div class="about-copy prose">{{ .Content }}</div>
+      <figure class="about-photo">
+        <img src="{{ "images/george-bai.jpg" | relURL }}" alt="Portrait of George Bai">
+      </figure>
+    </div>
   </section>
 
   <section id="research" class="section page-shell" aria-labelledby="research-title">
