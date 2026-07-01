@@ -142,6 +142,12 @@ h1, h2, h3 { text-wrap: balance; }
 .section { padding-block: .1rem; scroll-margin-top: var(--nav-height); }
 #about { width: min(900px, calc(100% - 3rem)); padding-block: .9rem; }
 #research { padding-top: .9rem; }
+#research,
+#work-in-progress,
+#projects,
+#teaching,
+#reading-groups { width: min(900px, calc(100% - 3rem)); }
+#contact .page-shell { width: min(900px, calc(100% - 3rem)); }
 #work-in-progress,
 #projects,
 #teaching,
@@ -265,7 +271,7 @@ h1, h2, h3 { text-wrap: balance; }
 .contact-section p { max-width: 620px; margin-bottom: 0; font-family: var(--serif); font-size: clamp(1.25rem, 3vw, 1.55rem); }
 .contact-section a { color: white; text-decoration: underline; text-underline-offset: .2em; }
 .site-footer { padding: 2rem 0; color: var(--muted); background: var(--paper); font-size: .75rem; }
-.footer-inner { width: min(1120px, calc(100% - 3rem)); margin: 0 auto; display: flex; justify-content: space-between; gap: 1rem; }
+.footer-inner { width: min(900px, calc(100% - 3rem)); margin: 0 auto; display: flex; justify-content: space-between; gap: 1rem; }
 .page-shell.prose { padding-block: 5rem; }
 
 :focus-visible { outline: 3px solid #bf7435; outline-offset: 3px; }
@@ -311,6 +317,12 @@ h1, h2, h3 { text-wrap: balance; }
   .hero-tagline li { white-space: normal; }
   .section { padding-block: .1rem; }
   #about { width: min(100% - 2rem, 720px); }
+  #research,
+  #work-in-progress,
+  #projects,
+  #teaching,
+  #reading-groups,
+  #contact .page-shell { width: min(100% - 2rem, 900px); }
   .about-grid { grid-template-columns: 1fr; gap: 1rem; }
   .about-photo { width: 180px; justify-self: start; order: -1; }
   #work-in-progress,
