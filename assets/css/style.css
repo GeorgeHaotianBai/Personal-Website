@@ -146,11 +146,13 @@ h1, h2, h3 { text-wrap: balance; }
 #work-in-progress,
 #projects,
 #teaching,
+#opportunities,
 #reading-groups { width: min(900px, calc(100% - 3rem)); }
 #contact .page-shell { width: min(900px, calc(100% - 3rem)); }
 #work-in-progress,
 #projects,
 #teaching,
+#opportunities,
 #reading-groups,
 #contact { margin-top: 1.5rem; }
 .section h2,
@@ -249,12 +251,16 @@ h1, h2, h3 { text-wrap: balance; }
 }
 .wip-list li::before { content: "0" counter(work); color: var(--muted); font-family: var(--sans); font-size: .72rem; padding-top: .35rem; }
 .simple-item h3,
-.teaching-item h3 { margin-bottom: .2rem; font-family: var(--serif); font-size: 1.35rem; font-weight: 500; }
+.teaching-item h3,
+.opportunity-item h3 { margin-bottom: .2rem; font-family: var(--serif); font-size: 1.35rem; font-weight: 500; }
 .simple-item p { margin-bottom: .35rem; }
 .item-meta { color: var(--muted); font-size: .86rem; }
 .teaching-item { display: flex; justify-content: space-between; gap: 2rem; padding: 1rem 1.1rem; background: rgba(237, 232, 220, .62); }
 .teaching-item p { margin: 0; color: var(--muted); font-size: .9rem; }
 .teaching-item time { color: var(--muted); font-size: .88rem; }
+.opportunity-item { padding: 1rem 1.1rem; background: rgba(237, 232, 220, .62); }
+.opportunity-item h3 { margin: 0; }
+.opportunity-item strong { font-weight: 700; }
 .reading-list { margin-top: 1.75rem; display: grid; gap: .5rem; }
 .reading-list details { background: rgba(237, 232, 220, .62); }
 .reading-list summary { padding: .85rem 1rem; display: flex; justify-content: space-between; cursor: pointer; font-family: var(--serif); font-size: 1.08rem; list-style: none; }
@@ -321,6 +327,7 @@ h1, h2, h3 { text-wrap: balance; }
   #work-in-progress,
   #projects,
   #teaching,
+  #opportunities,
   #reading-groups,
   #contact .page-shell { width: min(100% - 2rem, 900px); }
   .about-grid { grid-template-columns: 1fr; gap: 1rem; }
@@ -328,6 +335,7 @@ h1, h2, h3 { text-wrap: balance; }
   #work-in-progress,
   #projects,
   #teaching,
+  #opportunities,
   #reading-groups,
   #contact { margin-top: 1.25rem; }
   .paper-card { grid-template-columns: 2rem minmax(0, 1fr); }

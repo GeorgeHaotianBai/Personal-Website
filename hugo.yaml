@@ -26,12 +26,15 @@ menu:
     - name: "Teaching"
       url: "/#teaching"
       weight: 30
+    - name: "Opportunities"
+      url: "/#opportunities"
+      weight: 40
     - name: "Reading groups"
       url: "/#reading-groups"
-      weight: 40
+      weight: 50
     - name: "Contact"
       url: "/#contact"
-      weight: 50
+      weight: 60
 
 markup:
   goldmark:

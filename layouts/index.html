@@ -125,6 +125,15 @@
     {{ end }}
   </section>
 
+  <section id="opportunities" class="section page-shell" aria-labelledby="opportunities-title">
+    <h2 id="opportunities-title">Opportunities</h2>
+    {{ range site.Data.opportunities }}
+      <article class="opportunity-item">
+        <h3><strong><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></strong></h3>
+      </article>
+    {{ end }}
+  </section>
+
   <section id="reading-groups" class="section page-shell" aria-labelledby="reading-title">
     <h2 id="reading-title">Reading groups</h2>
     <p class="section-intro">Since 2024, my coauthors and I have organized regular reading groups in political economy and microeconomic theory. We prepare lecture-style slides that synthesize research agendas and formal frameworks. Email me for the full reading lists.</p>
