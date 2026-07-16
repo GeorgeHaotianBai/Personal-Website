@@ -260,7 +260,6 @@ h1, h2, h3 { text-wrap: balance; }
 .teaching-item time { color: var(--muted); font-size: .88rem; }
 .opportunity-item { padding: 1rem 1.1rem; background: rgba(237, 232, 220, .62); }
 .opportunity-item h3 { margin: 0; }
-.opportunity-item strong { font-weight: 700; }
 .reading-list { margin-top: 1.75rem; display: grid; gap: .5rem; }
 .reading-list details { background: rgba(237, 232, 220, .62); }
 .reading-list summary { padding: .85rem 1rem; display: flex; justify-content: space-between; cursor: pointer; font-family: var(--serif); font-size: 1.08rem; list-style: none; }
